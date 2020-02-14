@@ -17,3 +17,97 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+
+function createCarousel() {
+  const carouselContainer = document.querySelector(".carousel-container")
+  const carousel = document.createElement('div');
+  const leftButton = document.createElement('div');
+  const mountains = document.createElement('img');
+  const computer = document.createElement('img');
+  const trees = document.createElement('img');
+  const turntable = document.createElement('img');
+  const rightButton = document.createElement('div')
+
+  //structure
+  carouselContainer.append(carousel);
+  carousel.append(leftButton, mountains, computer, trees, turntable, rightButton);
+  //classes
+  carousel.classList.add('carousel');
+  leftButton.classList.add('left-button');
+  rightButton.classList.add('right-button');
+  mountains.classList.add('img', 'mountains');
+  computer.classList.add('img', 'computer');
+  trees.classList.add('img', 'trees');
+  turntable.classList.add('img', 'turntable');
+  
+  //content
+  leftButton.innerText = (' < ');
+  rightButton.innerText = (' > ');
+  mountains.src = ("./assets/carousel/mountains.jpeg");
+  computer.src = ('./assets/carousel/computer.jpeg');
+  trees.src = ('./assets/carousel/trees.jpeg');
+  turntable.src = ('./assets/carousel/turntable.jpeg');
+  console.log(carousel);
+
+  //carousel functionality
+  let currentIndex = 1
+
+  leftButton.addEventListener('click', event => {
+    if (currentIndex === 1) {
+      currentIndex = 4;
+      console.log(currentIndex);
+      mountains.style.display = ("none");
+      turntable.style.display = ('block');
+    }else if(currentIndex === 2){
+      currentIndex -= 1;
+      console.log(currentIndex);
+      computer.style.display = ("none");
+      mountains.style.display = ('block');
+    }else if(currentIndex === 3) {
+      currentIndex -= 1;
+      console.log(currentIndex);
+      trees.style.display = ("none");
+      computer.style.display = ('block');
+    }else if(currentIndex === 4) {
+      currentIndex -= 1;
+      console.log(currentIndex);
+      turntable.style.display = ("none");
+      mountains.style.display = ('block');
+    }
+  
+  })
+
+  rightButton.addEventListener('click', event => {
+    if (currentIndex === 4) {
+      currentIndex = 1;
+      console.log(currentIndex);
+      mountains.style.display = ("none");
+      turntable.style.display = ('block');
+    }else if(currentIndex === 1){
+      currentIndex += 1;
+      console.log(currentIndex);
+      mountains.style.display = ("none");
+      turntable.style.display = ('block');
+    }else if(currentIndex === 2) {
+      currentIndex += 1;
+      console.log(currentIndex);
+      mountains.style.display = ("none");
+      turntable.style.display = ('block');
+    }else if(currentIndex === 3) {
+      currentIndex += 1;
+      console.log(currentIndex);
+      mountains.style.display = ("none");
+      turntable.style.display = ('block');
+    }
+  })
+
+  
+
+  return carousel;
+}
+
+createCarousel();
+
+
+
