@@ -29,20 +29,20 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. What is the DOM?
-
+    It's an API for HTML. It's lets us interact with an html documents, in this case, with JS.
 2. What is an event?
-
+    Basically anything that happens in the dom. for example, a mouseove or a click.
 3. What is an event listener?
-
+    It tracks specific events in the dom and ties them to specific elements. We can use this to add functionality to a click.
 4. Why would we convert a NodeList into an Array?
-
+    So we can use the arrays to do js things :)
 5. What is a component?
-
+    It's a reuseable piece of code, a function or set of functions, that allows you save time and avoid mistakes. This week we made components to create buttons and cards.
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
+* [x] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 * [ ] You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
