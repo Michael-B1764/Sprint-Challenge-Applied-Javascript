@@ -53,26 +53,41 @@ function createCarousel() {
   //carousel functionality
   let currentIndex = 1
 
+  mountains.style.transitionDuration = "1s";
+  computer.style.transitionDuration = "1s";
+  trees.style.transitionDuration = "1s";
+  turntable.style.transitionDuration = "1s";
+  
+
   leftButton.addEventListener('click', event => {
     if (currentIndex === 1) {
       currentIndex = 4;
       console.log(currentIndex);
+      mountains.style.transitionDuration = "1s";
       mountains.style.display = ("none");
+      turntable.style.transitionDuration = "1s";
       turntable.style.display = ('block');
+      
     }else if(currentIndex === 2){
       currentIndex -= 1;
       console.log(currentIndex);
+      computer.style.transitionDuration = "1s";
       computer.style.display = ("none");
+      mountains.style.transitionDuration = "1s";
       mountains.style.display = ('block');
     }else if(currentIndex === 3) {
       currentIndex -= 1;
       console.log(currentIndex);
+      trees.style.transitionDuration = "1s";
       trees.style.display = ("none");
+      computer.style.transitionDuration = "1s";
       computer.style.display = ('block');
     }else if(currentIndex === 4) {
       currentIndex -= 1;
       console.log(currentIndex);
+      turntable.style.transitionDuration = "1s";
       turntable.style.display = ("none");
+      trees.style.transitionDuration = "1s";
       trees.style.display = ('block');
     }
   
@@ -84,22 +99,30 @@ function createCarousel() {
     if (currentIndex === 4) {
       currentIndex = 1;
       console.log(currentIndex);
+      turntable.style.transitionDuration = "1s";
       turntable.style.display = ("none");
+      mountains.style.transitionDuration = "1s";
       mountains.style.display = ('block');
     }else if(currentIndex === 1){
       currentIndex += 1;
       console.log(currentIndex);
+      mountains.style.transitionDuration = "1s";
       mountains.style.display = ("none");
+      computer.style.transitionDuration = "1s";
       computer.style.display = ('block');
     }else if(currentIndex === 2) {
       currentIndex += 1;
       console.log(currentIndex);
+      computer.style.transitionDuration = "1s";
       computer.style.display = ("none");
+      trees.style.transitionDuration = "1s";
       trees.style.display = ('block');
     }else if(currentIndex === 3) {
       currentIndex += 1;
       console.log(currentIndex);
+      trees.style.transitionDuration = "1s";
       trees.style.display = ("none");
+      turntable.style.transitionDuration = "1s";
       turntable.style.display = ('block');
     }
   })
