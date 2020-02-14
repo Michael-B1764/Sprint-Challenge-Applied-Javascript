@@ -73,31 +73,33 @@ function createCarousel() {
       currentIndex -= 1;
       console.log(currentIndex);
       turntable.style.display = ("none");
-      mountains.style.display = ('block');
+      trees.style.display = ('block');
     }
   
   })
+
+  mountains.style.display = ("block");
 
   rightButton.addEventListener('click', event => {
     if (currentIndex === 4) {
       currentIndex = 1;
       console.log(currentIndex);
-      mountains.style.display = ("none");
-      turntable.style.display = ('block');
+      turntable.style.display = ("none");
+      mountains.style.display = ('block');
     }else if(currentIndex === 1){
       currentIndex += 1;
       console.log(currentIndex);
       mountains.style.display = ("none");
-      turntable.style.display = ('block');
+      computer.style.display = ('block');
     }else if(currentIndex === 2) {
       currentIndex += 1;
       console.log(currentIndex);
-      mountains.style.display = ("none");
-      turntable.style.display = ('block');
+      computer.style.display = ("none");
+      trees.style.display = ('block');
     }else if(currentIndex === 3) {
       currentIndex += 1;
       console.log(currentIndex);
-      mountains.style.display = ("none");
+      trees.style.display = ("none");
       turntable.style.display = ('block');
     }
   })
